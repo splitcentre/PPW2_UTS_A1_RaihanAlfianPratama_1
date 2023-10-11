@@ -15,6 +15,7 @@ class PlayerController extends Controller
     public function store(Request $request){
         $player= new player;
         $player->player_name=$request->player_name;
+        $player->position=$request->position;
         $player->no_punggung=$request->no_punggung;
         $player->save();
         return redirect('/index');

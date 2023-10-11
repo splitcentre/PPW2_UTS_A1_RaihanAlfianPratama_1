@@ -9,7 +9,7 @@
 <body>
     <div>
         <h4>Add Comic</h4>
-        <form method="post" action="{{route('pemain.store')}}">
+        <form method="post" action="{{route('player.store')}}">
             @csrf
             <div>Name <input type="text" name="player_name"></div>
             <div>Position <input type="text" name="position"></div>
