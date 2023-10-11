@@ -35,5 +35,6 @@
             @endforeach
         </tbody>
     </table>
+    <p align="right"><a href="{{route('player.create')}}">Add player</a></p>
 </body>
 </html>
