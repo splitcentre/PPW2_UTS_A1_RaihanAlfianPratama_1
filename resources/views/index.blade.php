@@ -19,10 +19,18 @@
         <tbody>
             @foreach($data_player as $player)
                 <tr>
+                    <td><form action="post" action="{{route('player.update',$player->id)}}">@csrf
+                            <button>Update</button></form></td>
                     <td>{{$player->id}}</td>
                     <td>{{$player->player_name}}</td>
                     <td>{{$player->no_punggung}}</td>
                     <td>{{$player->position}}</td>
+                    <td>
+                        <form action="{{route('player.destroy',$player->id)}}" method="post">
+                        @csrf
+                            <button  onClick="return confirm('are you sure)">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
